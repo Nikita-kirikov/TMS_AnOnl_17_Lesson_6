@@ -26,9 +26,13 @@ public class Bank {
 
     Scanner scan = new Scanner(System.in);
 
-    public void addMoney() {
-        System.out.println("Введите сумму, которую надо положить в банк");
-        int input = scan.nextInt();
+    public Bank(int count20Rub, int count50Rub, int count100Rub) {
+        this.count20Rub = count20Rub;
+        this.count50Rub = count50Rub;
+        this.count100Rub = count100Rub;
+    }
+
+    public void addMoney(int input) {
         for (int i = 0; i < input; i++) {
             input -= 20;
             count20Rub++;
@@ -36,10 +40,8 @@ public class Bank {
         System.out.println(count20Rub);
     }
 
-    public boolean getMoney() {
+    public boolean getMoney(int input) {
         sum += (count20Rub * banknote20) + (count50Rub * banknote50) + (count100Rub * banknote100);
-        System.out.println("Введите сумму, которую хотите снять");
-        int input = scan.nextInt();
         int s = input;
 
         if (input <= sum && input != 0) {
@@ -58,11 +60,5 @@ public class Bank {
             isSuccess = false;
         }
         return isSuccess;
-    }
-
-    public Bank(int count20Rub, int count50Rub, int count100Rub) {
-        this.count20Rub = count20Rub;
-        this.count50Rub = count50Rub;
-        this.count100Rub = count100Rub;
     }
 }

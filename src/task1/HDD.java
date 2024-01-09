@@ -6,9 +6,6 @@ public class HDD {
     public String type = "Внутренний";
     public int memory = 1000;
 
-    public void showInfo() {
-        System.out.println("Название " + name + " Объем " + memory + " Тип " + type);
-    }
 
     public HDD(String name, String type, int memory) {
         this.memory = memory;
@@ -19,4 +16,9 @@ public class HDD {
     public HDD() {
 
     }
+
+    public void showInfo() {
+        System.out.println("Название " + name + " Объем " + memory + " Тип " + type);
+    }
+
 }

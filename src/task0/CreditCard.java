@@ -17,17 +17,16 @@ public class CreditCard {
     int id;
     int currentMoney;
 
-    Scanner scan = new Scanner(System.in);
+    public CreditCard(int id, int money) {
+        this.id = id;
+        this.currentMoney = money;
+    }
 
-    public void addMoney() {
-        System.out.println("Введите сумму которую вы хотите положить на карту");
-        int input = scan.nextInt();
+    public void addMoney(int input) {
         currentMoney += input;
     }
 
-    public void getMoney() {
-        System.out.println("Введите сумму? которую хотите получить");
-        int input = scan.nextInt();
+    public void getMoney(int input) {
         if (input <= currentMoney) {
             System.out.println("Вы сняли " + input);
             currentMoney -= input;
@@ -40,8 +39,5 @@ public class CreditCard {
         System.out.println("Ваш счет " + id + " Сумма на счете равна " + currentMoney);
     }
 
-    public CreditCard(int id, int money) {
-        this.id = id;
-        this.currentMoney = money;
-    }
+
 }
