@@ -17,8 +17,12 @@ public class HDD {
 
     }
 
-    public void showInfo() {
-        System.out.println("Название " + name + " Объем " + memory + " Тип " + type);
+    @Override
+    public String toString() {
+        return "HDD{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", memory=" + memory +
+                '}';
     }
-
 }

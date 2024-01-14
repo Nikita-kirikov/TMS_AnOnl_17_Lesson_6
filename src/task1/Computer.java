@@ -45,4 +45,14 @@ public class Computer {
         System.out.println("Название " + ram.name + " Объем " + ram.memory);
         System.out.println("Модель: " + model + " Цена " + cost);
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "model='" + model + '\'' +
+                ", cost=" + cost +
+                ", hdd=" + hdd +
+                ", ram=" + ram +
+                '}';
+    }
 }

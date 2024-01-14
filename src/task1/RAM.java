@@ -14,8 +14,11 @@ public class RAM {
 
     }
 
-    public void showInfo() {
-        System.out.println("Название " + name + " Объем " + memory);
+    @Override
+    public String toString() {
+        return "RAM{" +
+                "memory=" + memory +
+                ", name='" + name + '\'' +
+                '}';
     }
-
 }

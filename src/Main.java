@@ -20,8 +20,8 @@ public class Main {
         Computer pc1 = new Computer("MSI", 2000);
         Computer pc2 = new Computer("Asus", 5000, new RAM("Samsung", 32), new HDD("Seagate", "Внешний", 512));
 
-        pc1.showInfo();
-        pc2.showInfo();
+        System.out.println(pc1.toString());
+        System.out.println(pc2.toString());
 
 
         Bank bank = new Bank(10,10,10);
